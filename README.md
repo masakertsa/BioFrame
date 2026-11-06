@@ -14,18 +14,18 @@ The protective shielding eliminates thermal conduction and convection, relying s
 
 ```mermaid
 graph TD
-    subgraph "Deep Space Environment"
+    subgraph Space ["Deep Space Environment"]
         Heat[Radiative Thermal Flux: P_external]
-    </subgraph>
+    end
     
-    subgraph "5-Layer Vacuum-Quartz Enclosure"
+    subgraph Enclosure ["5-Layer Vacuum-Quartz Enclosure"]
         L1[Layer 1] --> L2[Layer 2]
         L2 --> L3[Layer 3]
         L3 --> L4[Layer 4]
         L4 --> L5[Layer 5]
     end
     
-    subgraph "Protected Internal Core"
+    subgraph Internal ["Protected Internal Core"]
         L5 --> Core[Scientific Instruments: P_external / 6]
     end
 
