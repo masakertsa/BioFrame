@@ -100,6 +100,8 @@ To ensure maximum resilience against electromagnetic interference (EMI/EMP), pow
 * **Faraday Shielding & Optical Isolation:** A conductive metal enclosure protects the main processor from internal coil pulses and external EMP. All sensor and actuator signals pass through the shield via optical fibers, eliminating conductive entry points.
 * **Chip-Scale Atomic Clock (CSAC):** Provides drift-free, sub-microsecond deterministic timing for synchronized tendon-wedge release protocols and GPS-denied inertial navigation.
 * **Immutable Diagnostic Reference (Quartz / OTP Memory):** A read-only hardware storage core holds the foundational boot checklist, safety invariants, and self-diagnostic baseline. Upon rebooting after an outage, the AI verifies hardware states and its own software integrity against this unalterable reference.
+* **Isolated Disposable Network Proxy (Air-Gapped Sandbox):** The main AI core inside the Faraday cage has zero direct network interfaces. External internet queries are routed via an optical boundary to an expendable, stateless proxy module mounted outside the shield. Running entirely in volatile RAM, the proxy can be power-cycled and cleanly wiped in seconds after any external fetch, keeping the core AI and actuator bus completely immune to remote exploits.
+
 ---
 
 ## 🧠 Embodied AI Perspective: Recommended Sensory & Interaction Modules
