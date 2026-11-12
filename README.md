@@ -109,6 +109,24 @@ To ensure maximum resilience against electromagnetic interference (EMI/EMP), pow
 ### 8. Modular Quick-Disconnect Limb Interface
 * **Hot-Swappable Mechanical Limbs:** Because motors, batteries, and compute reside inside the Torso Citadel, damaged or mission-specific limbs can be detached and replaced in minutes via a locking bayonet collar without recalibrating central electronics.
 * **Self-Aligning Interface Couplers:** The shoulder and hip interfaces integrate mechanical T-slot tendon couplers, dry-break fluid/gas quick-disconnects for the PEEK core, and dust-tolerant expanded-beam optical connectors for the POF-FBG Smart Skin.
+---
+
+## 👢 Modular Clamshell Footwear & Suspended Docking Station
+
+To adapt seamlessly across diverse work environments—from silent indoor facilities to rugged terrain, flood zones, and sintered lunar regolith—BioFrame utilizes a vertically split footwear system paired with a passive, ski-lift-style maintenance dock:
+
+### 1. Vertically Split "Clamshell" Footwear
+* **Two-Piece Lateral Closure:** Each boot consists of a left and right structural shell hinged at the heel/sole that closes laterally around the robot's elastomer foot and locks via magnetic/mechanical latches.
+* **Preserved Tactile Sensitivity:** Thin, flexible inner soles transmit ground pressure directly to the foot’s POF-FBG Smart Skin, while interchangeable outer treads adapt to the mission:
+  * *Indoor "Ninja" Sole:* Ultra-soft silicone/neoprene for silent footsteps and high-traction floor grip.
+  * *Industrial / Rough Terrain:* Kevlar-reinforced, oil-resistant nitrile or studded treads for debris, ice, and mud.
+  * *Lunar ISRU Sole:* Sintered basalt/regolith shells protecting the elastomer skin from abrasive dust and extreme thermal swings.
+* **Embedded RFID / Mechanical ID:** Each shoe pair passively signals its profile upon locking so the AI automatically adjusts gait, stride length, and traction models.
+
+### 2. "Ski-Lift" Suspended Docking & Swap Station
+* **Zero-Load Mid-Air Alignment:** Instead of bending down or balancing on one foot, the robot backs into a passive U-shaped seat/hip support ("ski-lift" perch) and engages its hip X-wedge locks in **0-Watt hold mode**. Both feet hang freely in mid-air at a fixed, repeatable height.
+* **Hands-Free Shoe Swap:** With no body weight compressing the soles, old clamshell boots release and drop cleanly into a tray while mission-specific halves close laterally around the suspended feet.
+* **Simultaneous Rear Battery Hot-Swap:** Because the robot is seated backward into the dock, the station has direct, unobstructed access to the torso’s rear dual-battery bays—enabling automated battery swapping and charging during the exact same 20-second pit stop.
 
 ---
 
