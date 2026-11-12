@@ -188,6 +188,10 @@ While BioFrame is currently in the core mechanical and physics validation phase,
 ### 2. Terrestrial Extreme Environments & Disaster Response
 * **24/7 Infrastructure & Security Patrol:** Hot-swappable dual-battery bays combined with 0-Watt guard stances enable continuous multi-shift operation with up to 85–90% lower static power draw than conventional humanoids.
 * **Flood, Marine & Hazardous Zone Operations:** Full IP68 submersion capability, breathable pressure-equalization vents, and optional shoulder-integrated CO₂ emergency flotation bladders allow safe deployment in flooded facilities, industrial spills, and off-grid wilderness.
-
 ### 3. Next-Generation Bionics & Prosthetics
 * **Scalable Limb Modules:** Downscaling the parametric tendon-and-wedge architecture produces lightweight, silent, high-grip upper- and lower-limb prosthetics with real-time POF-FBG tactile feedback and multi-day battery life.
+* ### 4. Healthcare & Patient Mobility Assistance
+* **Silent "Ninja" Night-Shift Operation:** Equipped with soft indoor elastomer footwear and gearless tendon actuation, BioFrame moves silently through hospital corridors and wards without disturbing resting patients.
+* **0-Watt Rigid Support & Fall Prevention:** During patient transfers (bed-to-chair or assisted walking), the robot engages its hip and leg X-wedge locks into a vibration-free, rock-solid stance—acting as an intelligent, mobile support rail while the active torso counterweight dynamically compensates if a patient leans or stumbles.
+* **Gentle Tactile Contact & Hygiene:** The warm, compliant elastomer Smart Skin distributes grip pressure safely without pinching, while POF-FBG tactile sensors detect subtle shifts in patient balance. Full IP68 sealing allows rapid surface disinfection and quick footwear swaps between rooms.
+
