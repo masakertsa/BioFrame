@@ -84,9 +84,10 @@ To prevent structural damage if main power is lost mid-stride or off-balance, Bi
 
 1. **Zero-Power Default:** All control state machines must treat `LOCKED` as the default hardware state. Never rely on continuous motor torque for static posture holding.
 2. **Synchronized Release Protocol:** To prevent shock-loading during downward movement, control algorithms must command the main BLDC winch to briefly take up slack/tension *before* energizing the lateral magnetic wedge release, followed by controlled pay-out.
-3. **Hermetic Separation:** Any CAD designs for the joint/actuator interface must strictly isolate the MR-fluid cavity from the magnetic wedge lock to avoid iron particle contamination.
-4. **Sensor Isolation & Compensation:** Maintain the Kapton/PGS isolation barrier beneath the outer POF-FBG skin and utilize the sub-layer reference FBG channel for real-time thermal/strain baseline subtraction.
-5. **Parametric Scalability:** Keep mechanical formulas (tendon diameter, wedge taper angle $\alpha$, lateral release stroke, and Capstan friction losses across the segmented spine) parametric so the model can scale from small prosthetic wrists to 180 cm humanoid frames.
+3. **Power-Loss Safe-Pose Interrupt:** Firmware must monitor main bus voltage at > 1 kHz. Upon sudden power loss, immediately switch to the torso supercapacitor buffer to execute a rapid ground-plant / center-of-mass stabilization maneuver before dropping power to engage the 0-Watt wedge locks.
+4. **Hermetic Separation:** Any CAD designs for the joint/actuator interface must strictly isolate the MR-fluid cavity from the magnetic wedge lock to avoid iron particle contamination.
+5. **Sensor Isolation & Compensation:** Maintain the Kapton/PGS isolation barrier beneath the outer POF-FBG skin and utilize the sub-layer reference FBG channel for real-time thermal/strain baseline subtraction.
+6. **Parametric Scalability:** Keep mechanical formulas (tendon diameter, wedge taper angle $\alpha$, lateral release stroke, controlled-slip threshold, and Capstan friction losses across the segmented spine) parametric so the model can scale from small prosthetic wrists to 180 cm humanoid frames.
 
 ---
 
