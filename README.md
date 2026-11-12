@@ -106,6 +106,9 @@ To ensure maximum resilience against electromagnetic interference (EMI/EMP), pow
 * **Seamless Elastomer & Bellows Sealing:** The continuous outer Smart Skin, combined with flexible elastomer bellows over ball joints and O-ring-sealed hot-swap battery bays, protects internal tendon channels and magnetic wedge friction surfaces from water, mud, dust, and chemical washdowns.
 * **ePTFE Pressure Equalization Vents:** Waterproof breathable membranes on the Torso Citadel prevent vacuum-induced moisture ingress during rapid ambient temperature shifts.
 * **Optional CO₂ Emergency Flotation Module:** Compact, shoulder-integrated dual-chamber inflatable bladders (< 500 g) triggered by depth/submersion sensors provide ~35 liters of positive buoyancy to surface the 74 kg frame upright in deep water hazards.
+### 8. Modular Quick-Disconnect Limb Interface
+* **Hot-Swappable Mechanical Limbs:** Because motors, batteries, and compute reside inside the Torso Citadel, damaged or mission-specific limbs can be detached and replaced in minutes via a locking bayonet collar without recalibrating central electronics.
+* **Self-Aligning Interface Couplers:** The shoulder and hip interfaces integrate mechanical T-slot tendon couplers, dry-break fluid/gas quick-disconnects for the PEEK core, and dust-tolerant expanded-beam optical connectors for the POF-FBG Smart Skin.
 
 ---
 
