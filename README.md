@@ -96,3 +96,5 @@ To prevent structural damage if main power is lost mid-stride or off-balance, Bi
 - [ ] **Phase 2: Parametric 2D/3D Cross-Sections** (CAD models of the hermetically sealed dual-wedge lock, floating PEEK core, hollow-bone lattice, and Kapton/PGS-isolated Smart Skin).
 - [ ] **Phase 3: Control State Machine** (Firmware logic for synchronized BLDC + lateral magnetic wedge release and dual-channel FBG tactile filtering).
 - [ ] **Phase 4: Prototype & Bench Testing** (Single-joint 0-Watt load hold, thermal PCM/PGS dissipation, and impact fuse validation).
+- [ ] **Phase 5: Embodied AI & Multimodal Perception** (Integrating stereoscopic vision with POF-FBG tactile feedback and tendon proprioception, enabling safe physical learning protected by hardware-level Safe-Pose reflexes).
+
