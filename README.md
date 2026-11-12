@@ -8,6 +8,16 @@ BioFrame is a modular, biomimetic structural and actuation system designed for h
 ## 🏗️ System Architecture
 
 ```text
+[ PROTECTED TORSO CITADEL (Center of Mass / Faraday Cage) ]
+  ├── Compute Core ("Brain") + Chip-Scale Atomic Clock (CSAC) -> GPS-independent timing
+  ├── Immutable Root of Trust (5D Quartz / OTP Memory) -> Read-only boot & self-diagnostic checklist
+  ├── Supercapacitor Bank (< 150 g) -> 200–500 ms emergency reserve for Safe-Pose recovery
+  └── Optical I/O Pass-Throughs -> Zero copper wires breaching the EMI/EMP shield
+         │
+         ▼  (Optical control signals)
+[ CENTRAL DRIVE UNIT ]
+  └── Brushless DC (BLDC) Motor + Single-Layer Spline Winch
+
 [ CENTRAL DRIVE UNIT (Located at Center of Mass) ]
   └── Brushless DC (BLDC) Motor + Single-Layer Spline Winch
          │
@@ -76,6 +86,12 @@ To prevent structural damage if main power is lost mid-stride or off-balance, Bi
 * **Active Supercapacitor Safe-Pose:** A compact, torso-mounted supercapacitor bank (< 150 g) provides 200–500 ms of emergency reserve power upon detecting a main bus voltage drop. This allows the controller to execute a rapid **Safe-Pose maneuver** (planting a raised limb into a stable stance) before engaging the 0-Watt wedge locks.
 * **Passive Controlled-Slip & Impact Fuse:** If an unrecoverable fall occurs, the wedge lock's friction threshold allows controlled micro-slippage under extreme impact spikes while the internal gas-spring overload fuse and trabecular lattice absorb kinetic energy without structural failure.
 
+### 6. Shielded Torso Citadel (Faraday Cage, CSAC & Immutable Root of Trust)
+To ensure maximum resilience against electromagnetic interference (EMI/EMP), power loss, and software corruption, the central compute core is housed inside a dedicated torso bunker:
+* **Faraday Shielding & Optical Isolation:** A conductive metal enclosure protects the main processor from internal coil pulses and external EMP. All sensor and actuator signals pass through the shield via optical fibers, eliminating conductive entry points.
+* **Chip-Scale Atomic Clock (CSAC):** Provides drift-free, sub-microsecond deterministic timing for synchronized tendon-wedge release protocols and GPS-denied inertial navigation.
+* **Immutable Diagnostic Reference (Quartz / OTP Memory):** A read-only hardware storage core holds the foundational boot checklist, safety invariants, and self-diagnostic baseline. Upon rebooting after an outage, the AI verifies hardware states and its own software integrity against this unalterable reference.
+
 ---
 
 ## 🤖 AI & Engineering Context (For Future Development)
@@ -88,6 +104,7 @@ To prevent structural damage if main power is lost mid-stride or off-balance, Bi
 4. **Hermetic Separation:** Any CAD designs for the joint/actuator interface must strictly isolate the MR-fluid cavity from the magnetic wedge lock to avoid iron particle contamination.
 5. **Sensor Isolation & Compensation:** Maintain the Kapton/PGS isolation barrier beneath the outer POF-FBG skin and utilize the sub-layer reference FBG channel for real-time thermal/strain baseline subtraction.
 6. **Parametric Scalability:** Keep mechanical formulas (tendon diameter, wedge taper angle $\alpha$, lateral release stroke, controlled-slip threshold, and Capstan friction losses across the segmented spine) parametric so the model can scale from small prosthetic wrists to 180 cm humanoid frames.
+7. **Deterministic Boot & Integrity Verification:** On power-up or fault recovery, the controller must execute the read-only diagnostic sequence from the immutable memory core—verifying wedge lock states, POF-FBG skin baseline, and supercapacitor charge—before enabling active actuation.
 
 ---
 
