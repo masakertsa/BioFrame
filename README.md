@@ -71,6 +71,11 @@ To maximize strength-to-weight ratio, manage transient coil heat, and ensure noi
 * **Instant Stiffness Control:** Electro-Permanent Magnets (EPM) modulate the viscosity of Magnetorheological (MR) fluid within milliseconds, transitioning the joint from free-moving to rigid without continuous power draw.
 * **Mechanical Overload Fuse:** An integrated gas-spring relief valve absorbs sudden shock loads (e.g., falls or impacts) to prevent structural failure.
 
+### 5. Dual-Layer Power-Loss Protection ("Safe-Pose" & Controlled Slip)
+To prevent structural damage if main power is lost mid-stride or off-balance, BioFrame combines active millisecond-level recovery with passive mechanical compliance:
+* **Active Supercapacitor Safe-Pose:** A compact, torso-mounted supercapacitor bank (< 150 g) provides 200–500 ms of emergency reserve power upon detecting a main bus voltage drop. This allows the controller to execute a rapid **Safe-Pose maneuver** (planting a raised limb into a stable stance) before engaging the 0-Watt wedge locks.
+* **Passive Controlled-Slip & Impact Fuse:** If an unrecoverable fall occurs, the wedge lock's friction threshold allows controlled micro-slippage under extreme impact spikes while the internal gas-spring overload fuse and trabecular lattice absorb kinetic energy without structural failure.
+
 ---
 
 ## 🤖 AI & Engineering Context (For Future Development)
