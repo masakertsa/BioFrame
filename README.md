@@ -8,6 +8,15 @@ BioFrame is a modular, biomimetic structural and actuation system designed for h
 ## 🏗️ System Architecture
 
 ```text
+[ ETUPUOLI: Rintakehä & Vatsa ]
+  ├── Ylhäällä: Stereonäkö + Faradayn häkki (Tekoäly + CSAC-atomikello + Kvartsilasi-ROM)
+  ├── Keskellä: Keskusvoimayksikkö (BLDC-moottorit & vinssit)
+  └── Alhaalla ("Vatsa"): Dynaaminen vastapaino / liikkuva massakelkka (0W-lukittuva)
+[ KESKELLÄ: Kantava Päärunko ("Selkäranka") ]
+  └── Päävoimansiirto & superkondensaattorit
+[ TAKAPUOLI: Selkä ]
+  └── Tupla-akkupaikka (2x Hot-Swap akkupaketti, symmetrisesti vasen/oikea)
+
 [ PROTECTED TORSO CITADEL (Center of Mass / Faraday Cage) ]
   ├── Compute Core ("Brain") + Chip-Scale Atomic Clock (CSAC) -> GPS-independent timing
   ├── Immutable Root of Trust (5D Quartz / OTP Memory) -> Read-only boot & self-diagnostic checklist
