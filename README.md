@@ -101,6 +101,11 @@ To ensure maximum resilience against electromagnetic interference (EMI/EMP), pow
 * **Chip-Scale Atomic Clock (CSAC):** Provides drift-free, sub-microsecond deterministic timing for synchronized tendon-wedge release protocols and GPS-denied inertial navigation.
 * **Immutable Diagnostic Reference (Quartz / OTP Memory):** A read-only hardware storage core holds the foundational boot checklist, safety invariants, and self-diagnostic baseline. Upon rebooting after an outage, the AI verifies hardware states and its own software integrity against this unalterable reference.
 * **Isolated Disposable Network Proxy (Air-Gapped Sandbox):** The main AI core inside the Faraday cage has zero direct network interfaces. External internet queries are routed via an optical boundary to an expendable, stateless proxy module mounted outside the shield. Running entirely in volatile RAM, the proxy can be power-cycled and cleanly wiped in seconds after any external fetch, keeping the core AI and actuator bus completely immune to remote exploits.
+* 
+### 7. All-Weather IP67/IP68 Environmental Sealing & Emergency Flotation
+* **Seamless Elastomer & Bellows Sealing:** The continuous outer Smart Skin, combined with flexible elastomer bellows over ball joints and O-ring-sealed hot-swap battery bays, protects internal tendon channels and magnetic wedge friction surfaces from water, mud, dust, and chemical washdowns.
+* **ePTFE Pressure Equalization Vents:** Waterproof breathable membranes on the Torso Citadel prevent vacuum-induced moisture ingress during rapid ambient temperature shifts.
+* **Optional CO₂ Emergency Flotation Module:** Compact, shoulder-integrated dual-chamber inflatable bladders (< 500 g) triggered by depth/submersion sensors provide ~35 liters of positive buoyancy to surface the 74 kg frame upright in deep water hazards.
 
 ---
 
