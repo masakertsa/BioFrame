@@ -100,6 +100,26 @@ To ensure maximum resilience against electromagnetic interference (EMI/EMP), pow
 * **Faraday Shielding & Optical Isolation:** A conductive metal enclosure protects the main processor from internal coil pulses and external EMP. All sensor and actuator signals pass through the shield via optical fibers, eliminating conductive entry points.
 * **Chip-Scale Atomic Clock (CSAC):** Provides drift-free, sub-microsecond deterministic timing for synchronized tendon-wedge release protocols and GPS-denied inertial navigation.
 * **Immutable Diagnostic Reference (Quartz / OTP Memory):** A read-only hardware storage core holds the foundational boot checklist, safety invariants, and self-diagnostic baseline. Upon rebooting after an outage, the AI verifies hardware states and its own software integrity against this unalterable reference.
+---
+
+## 🧠 Embodied AI Perspective: Recommended Sensory & Interaction Modules
+
+*From an AI control and human-interaction standpoint, pairing BioFrame’s silent, low-inertia body with the following onboard modules maximizes situational awareness, safety, and offline autonomy:*
+
+### 1. Spatial Audio & Acoustic Diagnostics (Beamforming Mic Array)
+* **Directional Hearing:** A 4-to-8 microphone beamforming array isolates human speech in noisy environments and localizes off-camera sound sources (e.g., approaching vehicles, footsteps, or alarms).
+* **Self-Diagnostic Listening:** Acoustic anomaly detection monitors the robot's own internal tendons, winches, and wedge locks for subtle wear or friction changes before mechanical faults occur.
+
+### 2. Offline Voice Module & Acoustic Presence
+* **Local Neural TTS/STT:** On-device speech recognition and synthesis running inside the Torso Citadel ensures zero-latency communication without cloud dependency.
+* **Directional Speaker & Subtle Movement Cues:** Because BioFrame’s tendon drive and 0-Watt locks operate nearly silently, gentle spatial audio cues prevent startling nearby humans when approaching from behind.
+
+### 3. Long-Wave Infrared (LWIR) Thermal Vision
+* **All-Condition Perception:** Mounted alongside stereoscopic RGB cameras, a compact thermal sensor detects humans and animals in total darkness, smoke, or glare.
+* **Pre-Contact Hazard Avoidance:** Identifies hot surfaces (machinery, pipes, hot liquids) prior to physical contact, protecting the elastomer Smart Skin.
+
+### 4. Low-Power Visual Status Indicator (E-Ink / Ambient Halo)
+* **Transparent Intent:** A minimalist E-Ink chest display or subtle ambient LED ring communicates hardware states at a glance (e.g., *0-Watt Locked / Safe*, *Listening*, or *Active Motion*) without requiring uncanny facial expressions.
 
 ---
 
