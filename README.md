@@ -63,7 +63,7 @@ BioFrame is a modular, biomimetic structural and actuation system designed for h
 ## ⚙️ Core Subsystems
 
 ### 1. Centralized Tendon Transmission & Segmented "Spine" Channel
-* **Mass Centralization:** The BLDC motor and spline winch are mounted inside the main chassis/torso, keeping distal limbs ultra-lightweight and agile.
+* **Mass Centralization & Thermal Management:** Ironless BLDC motors (utilizing a 360° Accordion Halbach Array for flux concentration, self-centering, and cogging eradication, paired with a thermally conductive dielectric tube and closed-loop basalt/BFRP water jacket for active heat transfer) and spline winches are mounted inside the main chassis/torso, keeping distal limbs ultra-lightweight and agile.
 * **Articulated PTFE Guide:** Instead of a single continuous tube, the UHMWPE-PTFE routing channel is built from short, interlocking segments (like vertebrae). Each segment has a hard mechanical angle limit, preventing the carbon fiber tendon from exceeding its minimum bend radius under load.
 
 ### 2. Normally-Closed 0-Watt Dual-Opposing Magnetic Wedge Lock
@@ -109,6 +109,16 @@ To ensure maximum resilience against electromagnetic interference (EMI/EMP), pow
 ### 8. Modular Quick-Disconnect Limb Interface
 * **Hot-Swappable Mechanical Limbs:** Because motors, batteries, and compute reside inside the Torso Citadel, damaged or mission-specific limbs can be detached and replaced in minutes via a locking bayonet collar without recalibrating central electronics.
 * **Self-Aligning Interface Couplers:** The shoulder and hip interfaces integrate mechanical T-slot tendon couplers, dry-break fluid/gas quick-disconnects for the PEEK core, and dust-tolerant expanded-beam optical connectors for the POF-FBG Smart Skin.
+### 9. Passive RFID Component & Payload Identification (Optically Isolated)
+
+To support rapid hot-swapping of limbs, footwear, lock cartridges, and external payloads without manual recalibration or vulnerable exposed electrical contacts, BioFrame integrates battery-free, ruggedized UHF/HF RFID tags across modular hardware interfaces:
+
+* **Zero-Contact Interface Verification:** Passive RFID tags embedded inside quick-disconnect limbs, 2x2 wedge-lock cassettes, and Clamshell footwear transmit component IDs, load ratings, and wear-cycle histories immediately upon mechanical latching.
+* **Automatic Gait & Footwear Adaptation:** Foot-mounted readers identify attached Clamshell soles (e.g., indoor silicone, heavy-duty studded, or wide snow-track treads), allowing the AI to automatically update ground-friction models, stride height, and center-of-mass kinematics.
+* **Heavy-Duty Payload & Tool Recognition (AR Co-Pilot):** Palm-integrated readers scan tagged industrial beams, containers, or specialized attachments upon contact, displaying verified mass, center-of-gravity, and safe lifting limits directly on the operator's AR HUD prior to lifting.
+* **Operator Profile & Access Authentication:** An RFID transponder integrated into the operator's flight suit or AR glasses authenticates cockpit entry and automatically configures seat geometry and motion-mirroring scaling factors.
+* **Faraday-Compliant Optical Routing:** Because radio frequencies cannot penetrate the Torso Citadel's EMI/EMP shield, all RFID transceivers are mounted externally at limb/foot interfaces and route decoded metadata into the core compute bunker strictly via noise-immune optical fibers.
+
 ---
 
 ## 👢 Modular Clamshell Footwear & Suspended Docking Station
@@ -127,6 +137,86 @@ To adapt seamlessly across diverse work environments—from silent indoor facili
 * **Zero-Load Mid-Air Alignment:** Instead of bending down or balancing on one foot, the robot backs into a passive U-shaped seat/hip support ("ski-lift" perch) and engages its hip X-wedge locks in **0-Watt hold mode**. Both feet hang freely in mid-air at a fixed, repeatable height.
 * **Hands-Free Shoe Swap:** With no body weight compressing the soles, old clamshell boots release and drop cleanly into a tray while mission-specific halves close laterally around the suspended feet.
 * **Simultaneous Rear Battery Hot-Swap:** Because the robot is seated backward into the dock, the station has direct, unobstructed access to the torso’s rear dual-battery bays—enabling automated battery swapping and charging during the exact same 20-second pit stop.
+
+## 🏗️ BioFrame Heavy Duty (2,500 kg Class): Human-in-the-Loop Exoskeleton & Mech Architecture
+
+To scale BioFrame from a 74 kg autonomous humanoid to a 2,500 kg heavy-duty industrial/rescue platform, the architecture applies two core mechanical scaling principles: **Parallelization** (splitting high loads across redundant, compact pathways) and **Segmented Bending** (dividing large joint angles into multi-stage low-stress increments). Instead of autonomous operation, the Heavy Duty variant operates as a Human-in-the-Loop system, pairing a human operator inside a shielded cockpit with an onboard AI Co-Pilot and Augmented Reality (AR) HUD.
+
+### System Architecture & Cockpit Layout
+
+```text
+[ FRONT: Armored Canopy & Operator Cockpit ]
+  ├── Top: Stereo RGB + LWIR Thermal Array + LiDAR
+  ├── Interior: Human Operator + AR Glasses (HUD) + Motion-Mirroring Harness
+  └── Lower ("Abdomen"): Dynamic Counterweight Mass Sled (0-Watt Locked)
+[ CENTER: Load-Bearing Titanium-Carbon Skeleton ("Spine" & Roll Cage) ]
+  └── Parallel Central Drive Units + Supercapacitor Safe-Pose Bank
+[ REAR: Back & Shoulders ]
+  └── Quad Hot-Swap Battery Bays (Symmetrical Left/Right) + Cooling Radiators
+```
+
+### 1. Parallelized Drive & 2x2 Matrix Wedge Locks
+
+In the 2,500 kg class, dynamic peak loads during walking or heavy lifting reach 50–75 kN (5–7.5 tons) per limb. Using a single thick tendon would violate minimum bend radii. BioFrame Heavy Duty solves this through parallelization:
+
+* **2x2 Square Lock Matrix:** High-load joints (knees, hips, elbows, shoulders) utilize four parallel dual-opposing magnetic wedge locks arranged in a square matrix (1:30, 4:30, 7:30, 10:30 around the inner frame). Each lock carries only 25% of the axial load, cancels lateral forces to zero, and provides full multi-axis stability (flexion, extension, and lateral torsion) alongside single-fault redundancy.
+* **Multi-Strand Flat Ribbon Tendons:** Instead of single thick cables, each 2x2 lock channel routes a bundle of flat, high-tensile carbon/Dyneema ribbons. Flat ribbons achieve tight bend radii over joints while maximizing surface contact area inside the hardened tool-steel/tungsten-carbide wedge jaws.
+* **2:1 / 3:1 Pulley Reduction:** Integrated low-friction sheaves immediately above the 2x2 locks reduce tension requirements on the torso-mounted parallel BLDC winches, enabling rapid movement without oversized motors.
+* **0-Watt Precision Hold:** When positioning heavy beams or debris, the operator can release controls at any moment; the 2x2 matrix locks instantly at 0 Watts, holding multi-ton payloads steady without hydraulic drift or power draw.
+
+### 2. Segmented Bending (Multi-Stage Joint Articulation)
+
+To prevent excessive Capstan friction and structural shear during deep joint flexion (up to 140°), major joints are divided into 3 to 4 sequential articulated segments:
+
+* **Incremental Angle Distribution:** Rather than bending 140° around a single pin, each mechanically linked segment bends only 35–45°, dramatically lowering localized tendon stress and heat buildup.
+* **Field-Replaceable Lock Cartridges:** Each corner of the 2x2 matrix is housed in a modular titanium cassette bolted to the outer frame, allowing rapid field replacement without disassembling the limb.
+
+### 3. Cockpit Architecture: Fixed Monocoque Spine & Forward-Tilting Canopy
+
+To maximize structural rigidity and operator safety without compromising boarding speed, the Heavy Duty cockpit utilizes a split structural design:
+
+* **Fixed Rear & Lower Monocoque ("The Anchor"):** The rear spine, lower pelvis tub, and lateral roll-cage ribs form a single, ultra-rigid Ti-6Al-4V titanium and CFRP load-bearing shell. All primary hip/shoulder joint loads, central BLDC winches, rear hot-swap battery bays, and the Faraday-shielded Torso Citadel are anchored directly into this uninterrupted structure.
+* **Forward-Tilting "Half-Bloom" Front Canopy:** Hinged at the lower abdominal bulkhead, the armored front canopy tilts forward vertically like an opening flower petal. The interior face of the lowered canopy integrates non-slip boarding steps, allowing the operator to walk straight into the cockpit from the front.
+* **0-Watt Canopy Wedge Lock & Gravity Emergency Release:** Once closed, dual-opposing mechanical-magnetic wedge locks seal the canopy against the fixed rear bulkhead (maintaining IP67/IP68 environmental sealing at 0 Watts). In an emergency, a manual mechanical release disengages the locks, allowing gravity to drop the front canopy open without electrical power.
+
+### 4. Modular External Lever Boom & Payload Rig
+
+To lift ultra-heavy payloads (3,000–4,000 kg) without overloading the multi-stage arms or sensitive POF-FBG tactile skin, BioFrame Heavy Duty integrates a quick-attach external lever boom:
+
+* **Direct Spine-to-Ground Load Path:** The titanium-carbon lever rig locks directly onto the fixed rear Monocoque Spine and lower pelvis hardpoints, bypassing the shoulders, elbows, and wrists completely.
+* **Hands-Free Fine Manipulation:** While the external boom carries the primary vertical mass, the robot's arms remain unloaded and free to stabilize, weld, bolt, or guide the payload with high precision.
+* **0-Watt Boom Wedge Lock:** Actuated by dedicated torso BLDC winches, the boom features its own heavy-duty 2x2 magnetic wedge lock—allowing multi-ton loads to be suspended indefinitely at **0 Watts** with zero hydraulic drift.
+* **Sacrificial Mechanical Overload Fuse:** Integrated shear pins and gas-spring dampers absorb sudden shock loads or drops, protecting the primary Inner Frame from structural torsion.
+* **RFID Auto-Calibration & AR Telemetry:** Passive RFID tags on the boom rig automatically transmit boom length, leverage ratio, and safe load limits to the AI Co-Pilot, syncing the abdomen counterweight sled and displaying real-time stress limits on the operator's AR HUD.
+
+### 5. Embodied AI Co-Pilot & AR Glasses Interface
+
+The Torso Citadel houses the main AI Core (isolated inside a Faraday cage with CSAC timing and optical I/O), acting as a real-time co-pilot for the human operator wearing lightweight AR glasses:
+
+* **Object & Grasp Point Highlighting:** Stereo vision and LWIR thermal sensors identify structural beams, cables, hazards, and fragile objects, projecting clean outlines and optimal grip zones directly onto the operator's AR HUD.
+* **Tactile Force Visualization:** Pressure data from the outer POF-FBG Smart Skin is translated into color-coded AR grip indicators (green/amber/red) and subtle controller haptics, allowing a 2.5-ton machine to handle both steel girders and fragile cargo safely.
+* **Automated Multi-Stage Kinematics:** The operator moves naturally using an interior motion-mirroring harness or gaze-assisted controls; the AI calculates real-time tension across all parallel tendons and synchronizes microsecond release pulses across the 2x2 wedge locks.
+* **360° Hazard & Blind-Spot Awareness:** Beamforming acoustic arrays and thermal cameras highlight nearby personnel, hot machinery, or live electrical lines in the AR view before contact occurs.
+* **Cockpit Safe-Pose Protection:** Upon main power loss, torso supercapacitors power the AI to plant the limbs into a wide, stable stance and engage all 2x2 locks at 0 Watts, protecting the human operator from rollover impacts.
+
+### 6. Heavy-Duty Clamshell Footwear & "Ski-Lift" Pit Stop
+
+Scaling the vertically split footwear system to 2,500 kg preserves ground-feel while preventing sinkage on soft terrain:
+
+* **Wide-Footprint Segmented Shells:** Interchangeable left/right clamshell treads widen laterally to lower ground pressure (track-shoe effect) and feature segmented toe/heel articulation for natural rolling gait.
+* **Hybrid Magnetic-Mechanical Latching:** Magnets guide the shells closed around the elastomer foot, while heavy-duty mechanical locking pins secure the shells against high lateral shear forces in rocky terrain.
+* **Zero-Load Docking & Operator Boarding:** Backing into the suspended "Ski-Lift" dock and locking the hip 2x2 matrices at 0 Watts suspends both feet in mid-air for automated shoe swaps, simultaneous rear battery hot-swaps, and safe, level boarding for the human operator.
+
+### Light vs. Heavy Duty Parametric Comparison
+
+| Specification | BioFrame Light (74 kg) | BioFrame Heavy Duty (2,500 kg) |
+| :--- | :--- | :--- |
+| **Control Mode** | Autonomous / Remote Teleop | Human-in-the-Loop Cockpit + AR Co-Pilot |
+| **Primary Skeleton** | Carbon Fiber / 7075 Aluminum | Ti-6Al-4V Titanium + CFRP Composite |
+| **Joint Lock Layout** | Dual-Opposing Wedge Pairs | 2x2 Square Matrix (4x Parallel Locks) |
+| **Tendon Architecture** | Single Carbon Fiber Core | Multi-Strand Flat Ribbons + 3:1 Sheaves |
+| **Joint Articulation** | Single / Dual Pivot | 3–4 Stage Segmented Bending |
+| **Clamshell Latching** | Magnetic / Mechanical | Magnetic Alignment + Heavy Pin Locks |
 
 ---
 
