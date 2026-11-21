@@ -289,3 +289,9 @@ While BioFrame is currently in the core mechanical and physics validation phase,
 * **Avian-Inspired Multi-Toe Ground Anchoring:** Quick-change rescue feet feature three long forward toes and a rear hallux spur that conform to rubble, stairs, or slopes and lock rigidly at 0 Watts—dramatically extending the forward tipping lever arm without needing heavy counterweights.
 * **Padded Cradle-Lift Forearms & Parallel Battery Boost:** Wide, warm elastomer-cushioned forearms distribute pressure safely during human extraction, while parallel dual-battery switching delivers peak lifting current before returning to zero-power mechanical hold.
 
+## 📄 License
+
+This project is licensed under the **MIT License** – preserving the original architecture credited to the creator.
+
+Copyright (c) 2026 masakertsa
+
