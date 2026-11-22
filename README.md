@@ -48,7 +48,7 @@ BioFrame is a modular, biomimetic structural and actuation system designed for h
 ```
 
 ### Radial Cross-Section (Top-Down View)
-```mermaid
+```text
   [ Outer Surface: Self-Healing Elastomer + POF-FBG Smart Skin ]
   [ Tactile & Thermal Isolation: 0.1 mm Kapton Film + PGS Graphite Layer ]
   [ Outer Structure: Porous Trabecular Lattice ]
