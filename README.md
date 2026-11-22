@@ -201,7 +201,7 @@ The Torso Citadel houses the main AI Core (isolated inside a Faraday cage with C
 * **360° Hazard & Blind-Spot Awareness:** Beamforming acoustic arrays and thermal cameras highlight nearby personnel, hot machinery, or live electrical lines in the AR view before contact occurs.
 * **Cockpit Safe-Pose Protection:** Upon main power loss, torso supercapacitors power the AI to plant the limbs into a wide, stable stance and engage all 2x2 locks at 0 Watts, protecting the human operator from rollover impacts.
 
-### 6. Heavy-Duty Clamshell Footwear & "Ski-Lift" Pit Stop
+### 6. Heavy-Duty Clamshell Footwear & Structural "Ski-Lift" Gantry
 
 Scaling the vertically split footwear system to 2,500 kg preserves ground-feel while preventing sinkage on soft terrain:
 
